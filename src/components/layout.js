@@ -54,6 +54,8 @@ const Header = styled.h1`
 
 const Content = styled.div`
   margin: 0 auto;
+  padding: 1.1rem 5vw;
+
   max-width: 100vw;
   width: 100%;
 `
@@ -61,6 +63,7 @@ const Content = styled.div`
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
+
   width: 100vw;
   max-width: 100vw;
 `

@@ -34,7 +34,7 @@ const ListItem = styled.li`
 `
 
 const LinkStyle = {
-  padding: '1.1rem 5vw',
+  padding: '1.1rem 0',
   hoverBackgroundColor: 'rgba(0, 0, 0, 0.03)',
 }
 
