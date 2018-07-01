@@ -22,7 +22,8 @@ const Header = styled.h1`
   transform-origin: top left;
 `
 
-const HeaderLink = styled.a.attrs({
+// const HeaderLink = styled.a.attrs({
+const HeaderLink = styled(Link).attrs({
   href: props => props.to,
 })`
   text-decoration: none;

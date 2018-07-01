@@ -38,6 +38,7 @@ const ExternalLink = styled.a.attrs({
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
 
   padding: ${props => props.padding};
 
@@ -50,6 +51,7 @@ const InternalLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
 
   padding: ${props => props.padding};
 `
@@ -63,8 +65,7 @@ const Figure = styled.img.attrs({
   height: 300px;
 
   position: absolute;
-  top: 2rem;
-  right: 50%;
+  right: 1rem;
   margin: 0;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
