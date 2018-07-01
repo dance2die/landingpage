@@ -6,9 +6,9 @@ For an overview of the project structure please refer to the [Gatsby documentati
 
 ## Icons
 
-* [Blog (SVG)](https://thenounproject.com/search/?q=blog&i=1087123)
-* [Creations (SVG)](https://thenounproject.com/search/?q=creations&i=1584279)
-* [Contributions (SVG)](https://thenounproject.com/search/?q=contributions&i=1736176)
+* [Blog (SVG)](https://thenounproject.com/search/?q=blog&i=1448098) - Blog by Mello from the Noun Project
+* [Creations (SVG)](https://thenounproject.com/search/?q=creations&i=1584279) - potential by Nithinan Tatah from the Noun Project
+* [Contributions (SVG)](https://thenounproject.com/search/?q=contributions&i=1736176) - teamwork by vectoriconset10 from the Noun Project
 
 ## Install
 

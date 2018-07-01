@@ -1,12 +1,16 @@
 import React from 'react'
-import { Link, withPrefix } from 'gatsby'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
 
-import BlogSvg from '../svg/blog.svg'
-import CreationsSvg from '../svg/creations.svg'
-import ContributionsSvg from '../svg/contributions.svg'
+import blogFigure from '../svg/blog.svg'
+import creationsFigure from '../svg/creations.svg'
+import contributionsFigure from '../svg/contributions.svg'
+
+import blogEmoji from '../svg/blog_emoji.svg'
+import creationsEmoji from '../svg/creations_emoji.svg'
+import contributionsEmoji from '../svg/contributions_emoji.svg'
 
 const LinkContainer = styled.ul`
   padding: 0;
@@ -30,6 +34,10 @@ const ExternalLink = styled.a.attrs({
   target: '_blank',
   href: props => props.href,
 })`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
   padding: ${props => props.padding};
 
   &:hover {
@@ -38,6 +46,10 @@ const ExternalLink = styled.a.attrs({
 `
 
 const InternalLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
   padding: ${props => props.padding};
 `
 
@@ -67,7 +79,11 @@ const Figure = styled.img.attrs({
 
 const LinkDescription = styled.span``
 
-const Emoji = styled.span`
+const Emoji = styled.img.attrs({
+  src: props => props.src,
+  alt: props => props.alt,
+})`
+  height: 5rem;
   margin-right: 2rem;
 `
 
@@ -80,23 +96,23 @@ const IndexPage = props => {
             style={LinkStyle}
             href="https://www.slightedgecoder.com/"
           >
-            <Emoji>🚀</Emoji>
+            <Emoji src={blogEmoji} alt="Blog Emoji" />
             <LinkDescription>Blog</LinkDescription>
-            <Figure src={BlogSvg} alt="Blog SVG" />
+            <Figure src={blogFigure} alt="Blog SVG" />
           </ExternalLink>
         </ListItem>
         <ListItem>
           <ExternalLink style={LinkStyle} href="https://github.com/dance2die/">
-            <Emoji>🏭</Emoji>
+            <Emoji src={creationsEmoji} alt="Creations Emoji" />
             <LinkDescription>Creations</LinkDescription>
-            <Figure src={CreationsSvg} alt="Creations SVG" />
+            <Figure src={creationsFigure} alt="Creations SVG" />
           </ExternalLink>
         </ListItem>
         <ListItem>
           <InternalLink style={LinkStyle} to="/contributions/">
-            <Emoji>😎</Emoji>
+            <Emoji src={contributionsEmoji} alt="Contributions Emoji" />
             <LinkDescription>Contributions</LinkDescription>
-            <Figure src={ContributionsSvg} alt="Contributions SVG" />
+            <Figure src={contributionsFigure} alt="Contributions SVG" />
           </InternalLink>
         </ListItem>
       </LinkContainer>
