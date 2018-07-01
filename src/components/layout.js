@@ -11,6 +11,7 @@ injectGlobal`
   body {
     padding: 0;
     margin: 0;
+    letter-spacing: 4px;
     font-family: Roboto mono, monospace;
   }
 `
@@ -28,7 +29,7 @@ const Header = styled.h1`
 
   color: #000
 
-  transform: rotate(-90deg) translateX(-375px) translateY(10px);
+  transform: rotate(-90deg) translateX(-250px) translateY(10px);
   transform-origin: top left;
 `
 
@@ -75,7 +76,7 @@ const Layout = ({ children, data }) => (
         <Container>
           <HeaderContainer>
             <Header>
-              <HeaderLink to="/">Hi, I am Sung Kim</HeaderLink>
+              <HeaderLink to="/">Sung Kim</HeaderLink>
             </Header>
           </HeaderContainer>
           <Content>{children}</Content>
