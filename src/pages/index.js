@@ -17,7 +17,14 @@ const LinkContainer = styled.ul`
   margin: 5vw 0;
   list-style: none;
   width: 100%;
-  font-size: 2rem;
+
+  @media (min-width: 700px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 1.2rem;
+  }
 `
 
 const ListItem = styled.li`

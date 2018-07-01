@@ -24,19 +24,32 @@ injectGlobal`
 
 const HeaderContainer = styled.header`
   border-right: 1px solid #eaeaea;
-  height: 100vh;
-  width: 100px;
+
+  @media (min-width: 700px) {
+    height: 100vh;
+    width: 100px;
+  }
+
+  @media (max-width: 699px) {
+    border-bottom: 1px solid #eaeaea;
+  }
 `
 
 const Header = styled.h1`
-  width: 100vw;
-  font-size: 2rem;
   padding: 1rem;
 
-  color: #000
+  color: #000;
 
-  transform: rotate(-90deg) translateX(-250px) translateY(10px);
-  transform-origin: top left;
+  @media (max-width: 699px) {
+    font-size: 1.2rem;
+  }
+
+  @media (min-width: 700px) {
+    width: 100vw;
+    font-size: 2rem;
+    transform: rotate(-90deg) translateX(-250px) translateY(10px);
+    transform-origin: top left;
+  }
 `
 
 const Content = styled.div`
@@ -54,7 +67,14 @@ const ContentContainer = styled.div`
 
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
+
+  @media (min-width: 700px) {
+    flex-direction: row;
+  }
+
+  @media (max-width: 699px) {
+    flex-direction: column;
+  }
 `
 
 const SocialNetworkContainer = styled.ul`
@@ -62,11 +82,17 @@ const SocialNetworkContainer = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 0 6vw;
+
+  padding: 6vh 6vw;
+  height: 100%;
+
+  background-color: #f8f8f8;
+  border-top: 1px solid #eaeaea;
 `
 
 const SocialNetworkItem = styled.li`
   margin-right: 2rem;
+  padding: 1rem;
 `
 
 const SocialLink = styled(ExternalLink)`
