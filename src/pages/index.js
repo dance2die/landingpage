@@ -3,26 +3,16 @@ import { Link, withPrefix } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
-// import BlogSvg from 'svg-react-loader?name=Icon!../svg/blog.svg';
-// import ContributionsSvg from 'svg-react-loader?name=Icon!../svg/contributions.svg';
-// import CreationsSvg from 'svg-react-loader?name=Icon!../svg/creations.svg';
 
-import BlogSvg from "../svg/blog.svg";
-import CreationsSvg from "../svg/creations.svg";
-import ContributionsSvg from "../svg/contributions.svg";
-
-const NameContainer = styled.h1`
-  margin: 3vw auto;
-  width: 100vw;
-`
+import BlogSvg from '../svg/blog.svg'
+import CreationsSvg from '../svg/creations.svg'
+import ContributionsSvg from '../svg/contributions.svg'
 
 const LinkContainer = styled.ul`
   padding: 0;
   margin: 5vw 0;
   list-style: none;
 `
-
-
 
 const LinkStyle = {
   padding: '0 5vw',
@@ -46,29 +36,27 @@ const InternalLink = styled(Link)`
 
 const Figure = styled.img.attrs({
   src: props => props.src,
-  alt: props => props.alt
+  alt: props => props.alt,
 })`
   color: red;
   width: 300px;
   height: 300px;
 
   position: absolute;
-  top: -9vw;
-  right: 15vw;
+  top: 2rem;
+  right: 50%;
   margin: 0;
-  -webkit-transition: all .15s ease;
-  transition: all .15s ease;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
   pointer-events: none;
   opacity: 0;
   z-index: -1;
 
-  
-  ${ExternalLink}:hover &, ${InternalLink}:hover & {
-    opacity: 1;
+  ${ExternalLink}:hover &,
+  ${InternalLink}:hover & {
+    opacity: 0.3;
   }
-
 `
-
 
 const LinkDescription = styled.span``
 
@@ -76,11 +64,9 @@ const Emoji = styled.span`
   margin-right: 2rem;
 `
 
-
 const IndexPage = props => {
   return (
     <Layout>
-      <NameContainer>Hi, I am Sung</NameContainer>
       <LinkContainer>
         <li>
           <ExternalLink
