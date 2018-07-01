@@ -6,12 +6,12 @@ import styled, { injectGlobal } from 'styled-components'
 import { Link } from 'gatsby'
 
 injectGlobal`
-  @import url(‘https://fonts.googleapis.com/css?family=Roboto+mono');
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
  
   body {
     padding: 0;
     margin: 0;
-    font-family: Roboto mono, sans-serif;
+    font-family: Roboto mono, monospace;
   }
 `
 
@@ -23,10 +23,12 @@ const HeaderContainer = styled.header`
 
 const Header = styled.h1`
   width: 100vw;
-  font-size: 3rem;
+  font-size: 2rem;
   padding: 1rem;
 
-  transform: rotate(-90deg) translateX(-425px);
+  color: #000
+
+  transform: rotate(-90deg) translateX(-375px) translateY(10px);
   transform-origin: top left;
 `
 
