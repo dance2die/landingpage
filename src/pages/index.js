@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
+import { ExternalLink, InternalLink } from '../components/Links'
 
 import blogFigure from '../svg/blog.svg'
 import creationsFigure from '../svg/creations.svg'
@@ -31,30 +32,30 @@ const LinkStyle = {
   hoverBackgroundColor: 'rgba(0, 0, 0, 0.03)',
 }
 
-const ExternalLink = styled.a.attrs({
-  target: '_blank',
-  href: props => props.href,
-})`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
+// const ExternalLink = styled.a.attrs({
+//   target: '_blank',
+//   href: props => props.href,
+// })`
+//   display: flex;
+//   align-items: center;
+//   justify-content: flex-start;
+//   position: relative;
 
-  padding: ${props => props.padding};
+//   padding: ${props => props.padding};
 
-  &:hover {
-    background-color: ${props => props.hoverBackgroundColor};
-  }
-`
+//   &:hover {
+//     background-color: ${props => props.hoverBackgroundColor};
+//   }
+// `
 
-const InternalLink = styled(Link)`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
+// const InternalLink = styled(Link)`
+//   display: flex;
+//   align-items: center;
+//   justify-content: flex-start;
+//   position: relative;
 
-  padding: ${props => props.padding};
-`
+//   padding: ${props => props.padding};
+// `
 
 const Figure = styled.img.attrs({
   src: props => props.src,

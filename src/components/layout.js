@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import styled, { injectGlobal } from 'styled-components'
-import { Link } from 'gatsby'
+
+import { HeaderLink } from '../components/Links'
 
 injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
@@ -38,22 +39,32 @@ const Header = styled.h1`
   transform-origin: top left;
 `
 
-// const HeaderLink = styled.a.attrs({
-const HeaderLink = styled(Link).attrs({
-  href: props => props.to,
-})`
-  text-decoration: none;
-`
-
 const Content = styled.div`
   margin: 0 auto;
   max-width: 100vw;
   width: 100%;
 `
 
+const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
 const Container = styled.div`
   display: flex;
   flex-direction: row;
+`
+
+const SocialNetworkContainer = styled.ul`
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+
+  padding: 0 6vw;
+`
+
+const SocialNetworkItem = styled.li`
+  margin-right: 2rem;
 `
 
 const Layout = ({ children, data }) => (
@@ -84,7 +95,14 @@ const Layout = ({ children, data }) => (
               <HeaderLink to="/">Sung Kim</HeaderLink>
             </Header>
           </HeaderContainer>
-          <Content>{children}</Content>
+          <ContentContainer>
+            <Content>{children}</Content>
+            <SocialNetworkContainer>
+              <SocialNetworkItem>Twitter</SocialNetworkItem>
+              <SocialNetworkItem>IG</SocialNetworkItem>
+              <SocialNetworkItem>dev.to</SocialNetworkItem>
+            </SocialNetworkContainer>
+          </ContentContainer>
         </Container>
       </>
     )}
