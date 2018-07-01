@@ -30,6 +30,7 @@ const HeaderLink = styled.a.attrs({
 const Content = styled.div`
   margin: 0 auto;
   max-width: 100vw;
+  width: 100%;
 `
 
 const Container = styled.div`

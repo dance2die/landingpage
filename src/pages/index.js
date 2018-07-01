@@ -12,6 +12,13 @@ const LinkContainer = styled.ul`
   padding: 0;
   margin: 5vw 0;
   list-style: none;
+  width: 100%;
+`
+
+const ListItem = styled.li`
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
 `
 
 const LinkStyle = {
@@ -68,33 +75,30 @@ const IndexPage = props => {
   return (
     <Layout>
       <LinkContainer>
-        <li>
+        <ListItem>
           <ExternalLink
             style={LinkStyle}
             href="https://www.slightedgecoder.com/"
           >
             <Emoji>🚀</Emoji>
             <LinkDescription>Blog</LinkDescription>
-            {/* <img src={BlogSvg} alt="BlogSVG" style={{width: "300px", height: "300px"}} /> */}
             <Figure src={BlogSvg} alt="Blog SVG" />
           </ExternalLink>
-        </li>
-        <li>
+        </ListItem>
+        <ListItem>
           <ExternalLink style={LinkStyle} href="https://github.com/dance2die/">
             <Emoji>🏭</Emoji>
             <LinkDescription>Creations</LinkDescription>
-            {/* <img src={CreationsSvg} alt="Creations SVG" style={{width: "300px", height: "300px"}} /> */}
             <Figure src={CreationsSvg} alt="Creations SVG" />
           </ExternalLink>
-        </li>
-        <li>
+        </ListItem>
+        <ListItem>
           <InternalLink style={LinkStyle} to="/contributions/">
             <Emoji>😎</Emoji>
             <LinkDescription>Contributions</LinkDescription>
-            {/* <img src={ContributionsSvg} alt="Contributions SVG" style={{width: "300px", height: "300px"}} /> */}
             <Figure src={ContributionsSvg} alt="Contributions SVG" />
           </InternalLink>
-        </li>
+        </ListItem>
       </LinkContainer>
     </Layout>
   )
