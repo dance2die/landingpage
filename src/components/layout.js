@@ -14,6 +14,11 @@ injectGlobal`
     letter-spacing: 4px;
     font-family: Roboto mono, monospace;
   }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
 `
 
 const HeaderContainer = styled.header`
