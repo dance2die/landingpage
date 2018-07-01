@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
@@ -31,31 +30,6 @@ const LinkStyle = {
   padding: '1.1rem 5vw',
   hoverBackgroundColor: 'rgba(0, 0, 0, 0.03)',
 }
-
-// const ExternalLink = styled.a.attrs({
-//   target: '_blank',
-//   href: props => props.href,
-// })`
-//   display: flex;
-//   align-items: center;
-//   justify-content: flex-start;
-//   position: relative;
-
-//   padding: ${props => props.padding};
-
-//   &:hover {
-//     background-color: ${props => props.hoverBackgroundColor};
-//   }
-// `
-
-// const InternalLink = styled(Link)`
-//   display: flex;
-//   align-items: center;
-//   justify-content: flex-start;
-//   position: relative;
-
-//   padding: ${props => props.padding};
-// `
 
 const Figure = styled.img.attrs({
   src: props => props.src,

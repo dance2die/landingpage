@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import styled, { injectGlobal } from 'styled-components'
 
-import { HeaderLink } from '../components/Links'
+import { HeaderLink, ExternalLink } from '../components/Links'
 
 injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
@@ -48,6 +48,8 @@ const Content = styled.div`
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100vw;
+  max-width: 100vw;
 `
 
 const Container = styled.div`
@@ -59,12 +61,20 @@ const SocialNetworkContainer = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: row;
-
+  flex-wrap: wrap;
   padding: 0 6vw;
 `
 
 const SocialNetworkItem = styled.li`
   margin-right: 2rem;
+`
+
+const SocialLink = styled(ExternalLink)`
+  color: #666;
+
+  &:hover {
+    border-bottom: 1px dotted #000;
+  }
 `
 
 const Layout = ({ children, data }) => (
@@ -98,9 +108,19 @@ const Layout = ({ children, data }) => (
           <ContentContainer>
             <Content>{children}</Content>
             <SocialNetworkContainer>
-              <SocialNetworkItem>Twitter</SocialNetworkItem>
-              <SocialNetworkItem>IG</SocialNetworkItem>
-              <SocialNetworkItem>dev.to</SocialNetworkItem>
+              <SocialNetworkItem>
+                <SocialLink href="https://twitter.com/slightedgecoder">
+                  Twitter
+                </SocialLink>
+              </SocialNetworkItem>
+              <SocialNetworkItem>
+                <SocialLink href="https://dev.to/dance2die">dev.to</SocialLink>
+              </SocialNetworkItem>
+              <SocialNetworkItem>
+                <SocialLink href="https://stackoverflow.com/users/4035/sung?tab=profile">
+                  StackOverflow
+                </SocialLink>
+              </SocialNetworkItem>
             </SocialNetworkContainer>
           </ContentContainer>
         </Container>
