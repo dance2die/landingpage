@@ -17,6 +17,7 @@ const LinkContainer = styled.ul`
   margin: 5vw 0;
   list-style: none;
   width: 100%;
+  font-size: 4rem;
 `
 
 const ListItem = styled.li`
@@ -83,7 +84,7 @@ const Emoji = styled.img.attrs({
   src: props => props.src,
   alt: props => props.alt,
 })`
-  height: 5rem;
+  height: 6rem;
   margin-right: 2rem;
 `
 

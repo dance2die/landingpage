@@ -15,9 +15,9 @@ const HeaderContainer = styled.header`
 
 const Header = styled.h1`
   width: 100vw;
-  font-size: 1.5rem;
+  font-size: 3rem;
 
-  transform: rotate(-90deg) translateX(-22%) translateY(200%);
+  transform: rotate(-90deg) translateX(-40%) translateY(120%);
   transform-origin: bottom left;
 `
 
