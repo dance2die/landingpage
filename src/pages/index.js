@@ -17,7 +17,7 @@ const LinkContainer = styled.ul`
   margin: 5vw 0;
   list-style: none;
   width: 100%;
-  font-size: 4rem;
+  font-size: 2rem;
 `
 
 const ListItem = styled.li`
@@ -27,7 +27,7 @@ const ListItem = styled.li`
 `
 
 const LinkStyle = {
-  padding: '0 5vw',
+  padding: '1.1rem 5vw',
   hoverBackgroundColor: 'rgba(0, 0, 0, 0.03)',
 }
 
@@ -85,7 +85,7 @@ const Emoji = styled.img.attrs({
   src: props => props.src,
   alt: props => props.alt,
 })`
-  height: 6rem;
+  height: 3rem;
   margin-right: 2rem;
 `
 

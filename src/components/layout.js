@@ -2,10 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
+import styled, { injectGlobal } from 'styled-components'
 import { Link } from 'gatsby'
 
-import './layout.css'
+injectGlobal`
+  @import url(‘https://fonts.googleapis.com/css?family=Roboto+mono');
+ 
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: Roboto mono, sans-serif;
+  }
+`
 
 const HeaderContainer = styled.header`
   border-right: 1px solid #eaeaea;
@@ -18,7 +26,7 @@ const Header = styled.h1`
   font-size: 3rem;
   padding: 1rem;
 
-  transform: rotate(-90deg) translateX(-395px);
+  transform: rotate(-90deg) translateX(-425px);
   transform-origin: top left;
 `
 
