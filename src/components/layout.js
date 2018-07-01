@@ -16,9 +16,10 @@ const HeaderContainer = styled.header`
 const Header = styled.h1`
   width: 100vw;
   font-size: 3rem;
+  padding: 1rem;
 
-  transform: rotate(-90deg) translateX(-40%) translateY(120%);
-  transform-origin: bottom left;
+  transform: rotate(-90deg) translateX(-395px);
+  transform-origin: top left;
 `
 
 const HeaderLink = styled.a.attrs({
