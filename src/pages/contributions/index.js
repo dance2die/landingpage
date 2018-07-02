@@ -3,12 +3,8 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../../components/layout'
-import { HomeLink } from '../../components/Links'
-import {
-  PostLink,
-  Excerpt,
-  ContributionsContainer,
-} from '../../components/Contributions'
+import { HomeLink, InternalLink } from '../../components/Links'
+import { Excerpt, ContributionsContainer } from '../../components/Contributions'
 import ErrorBoundary from '../../components/ErrorBoundary'
 
 const ExcerptPost = ({ node }) => {
@@ -17,7 +13,7 @@ const ExcerptPost = ({ node }) => {
   return (
     <div>
       <h3 style={{ marginBottom: '1rem' }}>
-        <PostLink to={slug}>{title}</PostLink>
+        <InternalLink to={slug}>{title}</InternalLink>
       </h3>
       <small>{node.frontmatter.date}</small>
       <Excerpt dangerouslySetInnerHTML={{ __html: node.excerpt }} />
