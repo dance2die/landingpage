@@ -47,7 +47,7 @@ const Figure = styled.img.attrs({
   height: 300px;
 
   position: absolute;
-  right: 1rem;
+  right: 3rem;
   margin: 0;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
