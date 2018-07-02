@@ -1,9 +1,7 @@
 import styled from 'styled-components'
 import { InternalLink } from './Links'
 
-const PostLink = styled(InternalLink).attrs({
-  target: `_blank`,
-})`
+const PostLink = styled(InternalLink)`
   box-shadow: none;
 `
 

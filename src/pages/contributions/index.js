@@ -11,19 +11,6 @@ import {
 } from '../../components/Contributions'
 import ErrorBoundary from '../../components/ErrorBoundary'
 
-// const PostLink = styled(InternalLink)`
-//   box-shadow: none;
-// `
-
-// const Excerpt = styled.p`
-//   letter-spacing: 1px;
-// `
-
-// const ContributionsContainer = styled.div`
-//   padding: 1.1rem 5vw;
-//   width: 65vw;
-// `
-
 const ExcerptPost = ({ node }) => {
   const slug = node.frontmatter.path
   const title = get(node, 'frontmatter.title') || slug
