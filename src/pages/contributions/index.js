@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../../components/layout'
+import { HomeLink } from '../../components/Links'
 
 class BlogIndex extends React.Component {
   render() {
@@ -10,6 +11,8 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout>
+        <HomeLink>Back to Home</HomeLink>
+
         {posts.map(({ node }) => {
           const slug = node.frontmatter.path
           const title = get(node, 'frontmatter.title') || slug
@@ -22,6 +25,7 @@ class BlogIndex extends React.Component {
               </h3>
               <small>{node.frontmatter.date}</small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              <hr />
             </div>
           )
         })}

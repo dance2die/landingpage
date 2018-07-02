@@ -33,4 +33,16 @@ const InternalLink = styled(Link)`
   padding: ${props => props.padding};
 `
 
-export { HeaderLink, ExternalLink, InternalLink }
+const ContributionsLink = styled(Link).attrs({
+  to: `/contributions`,
+})`
+  color: #0000ff;
+`
+
+const HomeLink = styled(Link).attrs({
+  to: `/`,
+})`
+  color: #0000ff;
+`
+
+export { HeaderLink, ExternalLink, InternalLink, ContributionsLink, HomeLink }
