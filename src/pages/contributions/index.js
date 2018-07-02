@@ -1,24 +1,28 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-import styled from 'styled-components'
+import { graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../../components/layout'
-import { HomeLink, InternalLink, ExternalLink } from '../../components/Links'
+import { HomeLink } from '../../components/Links'
+import {
+  PostLink,
+  Excerpt,
+  ContributionsContainer,
+} from '../../components/Contributions'
 import ErrorBoundary from '../../components/ErrorBoundary'
 
-const PostLink = styled(InternalLink)`
-  box-shadow: none;
-`
+// const PostLink = styled(InternalLink)`
+//   box-shadow: none;
+// `
 
-const Excerpt = styled.p`
-  letter-spacing: 1px;
-`
+// const Excerpt = styled.p`
+//   letter-spacing: 1px;
+// `
 
-const BlogIndexContainer = styled.div`
-  padding: 1.1rem 5vw;
-  width: 65vw;
-`
+// const ContributionsContainer = styled.div`
+//   padding: 1.1rem 5vw;
+//   width: 65vw;
+// `
 
 const ExcerptPost = ({ node }) => {
   const slug = node.frontmatter.path
@@ -41,12 +45,12 @@ class BlogIndex extends React.Component {
     return (
       <Layout>
         <ErrorBoundary>
-          <BlogIndexContainer>
+          <ContributionsContainer>
             <HomeLink>Back to Home</HomeLink>
             {posts.map(({ node }) => (
               <ExcerptPost key={node.frontmatter.path} node={node} />
             ))}
-          </BlogIndexContainer>
+          </ContributionsContainer>
         </ErrorBoundary>
       </Layout>
     )
