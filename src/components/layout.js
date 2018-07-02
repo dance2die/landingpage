@@ -101,9 +101,9 @@ const SocialNetworkItem = styled.li`
 const SocialLink = styled(ExternalLink)`
   color: #666;
 
-  &:hover {
-    border-bottom: 1px dotted #000;
-  }
+  // &:hover {
+  //   border-bottom: 1px dotted #000;
+  // }
 `
 
 const Layout = ({ children, data }) => (
