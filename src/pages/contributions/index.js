@@ -4,29 +4,34 @@ import styled from 'styled-components'
 import get from 'lodash/get'
 
 import Layout from '../../components/layout'
-import { HomeLink } from '../../components/Links'
+import { HomeLink, InternalLink, ExternalLink } from '../../components/Links'
 import ErrorBoundary from '../../components/ErrorBoundary'
+
+const PostLink = styled(InternalLink)`
+  box-shadow: none;
+`
+
+const Excerpt = styled.p`
+  letter-spacing: 1px;
+`
+
+const ExcerptPostContainer = styled.div`
+  padding: 1.1rem 5vw;
+`
 
 const ExcerptPost = ({ node }) => {
   const slug = node.frontmatter.path
   const title = get(node, 'frontmatter.title') || slug
   return (
-    <div key={slug}>
+    <ExcerptPostContainer>
       <h3 style={{ marginBottom: '1rem' }}>
-        <Link style={{ boxShadow: 'none' }} to={slug}>
-          {title}
-        </Link>
+        <PostLink to={slug}>{title}</PostLink>
       </h3>
       <small>{node.frontmatter.date}</small>
-      <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-      <hr />
-    </div>
+      <Excerpt dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+    </ExcerptPostContainer>
   )
 }
-
-const StyledExcerptPost = styled(ExcerptPost)`
-  letter-spacing: 1px;
-`
 
 class BlogIndex extends React.Component {
   render() {
@@ -37,7 +42,7 @@ class BlogIndex extends React.Component {
         <ErrorBoundary>
           <HomeLink>Back to Home</HomeLink>
           {posts.map(({ node }) => (
-            <StyledExcerptPost key={node.frontmatter.path} node={node} />
+            <ExcerptPost key={node.frontmatter.path} node={node} />
           ))}
         </ErrorBoundary>
       </Layout>
