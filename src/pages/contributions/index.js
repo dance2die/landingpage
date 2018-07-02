@@ -15,21 +15,22 @@ const Excerpt = styled.p`
   letter-spacing: 1px;
 `
 
-const ExcerptPostContainer = styled.div`
+const BlogIndexContainer = styled.div`
   padding: 1.1rem 5vw;
+  width: 65vw;
 `
 
 const ExcerptPost = ({ node }) => {
   const slug = node.frontmatter.path
   const title = get(node, 'frontmatter.title') || slug
   return (
-    <ExcerptPostContainer>
+    <div>
       <h3 style={{ marginBottom: '1rem' }}>
         <PostLink to={slug}>{title}</PostLink>
       </h3>
       <small>{node.frontmatter.date}</small>
       <Excerpt dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-    </ExcerptPostContainer>
+    </div>
   )
 }
 
@@ -40,10 +41,12 @@ class BlogIndex extends React.Component {
     return (
       <Layout>
         <ErrorBoundary>
-          <HomeLink>Back to Home</HomeLink>
-          {posts.map(({ node }) => (
-            <ExcerptPost key={node.frontmatter.path} node={node} />
-          ))}
+          <BlogIndexContainer>
+            <HomeLink>Back to Home</HomeLink>
+            {posts.map(({ node }) => (
+              <ExcerptPost key={node.frontmatter.path} node={node} />
+            ))}
+          </BlogIndexContainer>
         </ErrorBoundary>
       </Layout>
     )
