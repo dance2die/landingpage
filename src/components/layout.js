@@ -215,6 +215,16 @@ const Layout = ({ children, data }) => (
                   </Credit>
                 </Credits>
               </CreditContainer>
+              <CreditContainer>
+                <Credits>
+                  <Credit>
+                    {'Site blatantly ripped off from- '}
+                    <SocialLink href="http://digitalpsychology.io/">
+                      digitalpsychology
+                    </SocialLink>
+                  </Credit>
+                </Credits>
+              </CreditContainer>
             </SocialNetworkContainer>
           </ContentContainer>
         </Container>
