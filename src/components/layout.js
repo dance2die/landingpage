@@ -135,12 +135,27 @@ const Credits = styled.ul`
 const Credit = styled.li`
   display: flex;
   align-items: center;
+
   @media (min-width: 700px) {
     font-size: 0.7rem;
   }
 
   @media (max-width: 699px) {
     font-size: 0.45rem;
+    flex-wrap: wrap;
+    letter-spacing: 0;
+  }
+`
+
+// const CreditTitle = styled.li`
+const CreditTitle = styled(Credit)`
+  @media (min-width: 700px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 699px) {
+    font-size: 0.65rem;
+    /* flex-direction: column; */
   }
 `
 
@@ -194,21 +209,21 @@ const Layout = ({ children, data }) => (
               </SocialNetworkItems>
               <CreditContainer>
                 <Credits>
-                  SVG Image Credits
+                  <CreditTitle>SVG Image Credits</CreditTitle>
                   <Credit>
-                    <CreditBlogEmoji /> -{' '}
+                    <CreditBlogEmoji />
                     <SocialLink href="https://thenounproject.com/search/?q=creations&i=1279581">
                       Writing by krishna from the Noun Project
                     </SocialLink>
                   </Credit>
                   <Credit>
-                    <CreditCreationsEmoji /> -{' '}
+                    <CreditCreationsEmoji />
                     <SocialLink href="https://thenounproject.com/search/?q=creations&i=516844">
                       creativity by Becris from the Noun Project
                     </SocialLink>
                   </Credit>
                   <Credit>
-                    <CreditContributionsEmoji /> -{' '}
+                    <CreditContributionsEmoji />
                     <SocialLink href="https://thenounproject.com/search/?q=contributions&i=1736176">
                       teamwork by vectoriconset10 from the Noun Project
                     </SocialLink>

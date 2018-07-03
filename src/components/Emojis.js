@@ -19,6 +19,10 @@ const CreditEmoji = styled.img.attrs({
 })`
   @media (min-width: 700px) {
     height: 1.75rem;
+    &::after {
+      content: '-';
+      color: red;
+    }
   }
 
   @media (max-width: 699px) {
