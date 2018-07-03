@@ -6,9 +6,6 @@ import styled, { injectGlobal } from 'styled-components'
 
 import { HeaderLink, ExternalLink } from '../components/Links'
 import {
-  BlogEmoji,
-  CreationsEmoji,
-  ContributionsEmoji,
   CreditBlogEmoji,
   CreditCreationsEmoji,
   CreditContributionsEmoji,
@@ -233,7 +230,7 @@ const Layout = ({ children, data }) => (
               <CreditContainer>
                 <Credits>
                   <Credit>
-                    {'Site blatantly ripped off from- '}
+                    {'Design ripped off from- '}
                     <SocialLink href="http://digitalpsychology.io/">
                       digitalpsychology
                     </SocialLink>
