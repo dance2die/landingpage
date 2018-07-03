@@ -13,6 +13,27 @@ const Emoji = styled.img.attrs({
   margin-right: 2rem;
 `
 
+const CreditEmoji = styled.img.attrs({
+  src: props => props.src,
+  alt: props => props.alt,
+})`
+  @media (min-width: 700px) {
+    height: 1.75rem;
+  }
+
+  @media (max-width: 699px) {
+    height: 1rem;
+  }
+`
+
+const CreditBlogEmoji = () => <CreditEmoji src={blogEmoji} alt="Blog Emoji" />
+const CreditCreationsEmoji = () => (
+  <CreditEmoji src={creationsEmoji} alt="Creations Emoji" />
+)
+const CreditContributionsEmoji = () => (
+  <CreditEmoji src={contributionsEmoji} alt="Contributions Emoji" />
+)
+
 const BlogEmoji = () => <Emoji src={blogEmoji} alt="Blog Emoji" />
 const CreationsEmoji = () => (
   <Emoji src={creationsEmoji} alt="Creations Emoji" />
@@ -21,4 +42,11 @@ const ContributionsEmoji = () => (
   <Emoji src={contributionsEmoji} alt="Contributions Emoji" />
 )
 
-export { BlogEmoji, CreationsEmoji, ContributionsEmoji }
+export {
+  BlogEmoji,
+  CreationsEmoji,
+  ContributionsEmoji,
+  CreditBlogEmoji,
+  CreditCreationsEmoji,
+  CreditContributionsEmoji,
+}

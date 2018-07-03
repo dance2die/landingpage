@@ -5,6 +5,14 @@ import { StaticQuery, graphql } from 'gatsby'
 import styled, { injectGlobal } from 'styled-components'
 
 import { HeaderLink, ExternalLink } from '../components/Links'
+import {
+  BlogEmoji,
+  CreationsEmoji,
+  ContributionsEmoji,
+  CreditBlogEmoji,
+  CreditCreationsEmoji,
+  CreditContributionsEmoji,
+} from './Emojis'
 
 injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
@@ -83,7 +91,7 @@ const Container = styled.div`
 const SocialNetworkContainer = styled.ul`
   list-style: none;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 
   padding: 6vh 6vw;
@@ -91,6 +99,12 @@ const SocialNetworkContainer = styled.ul`
 
   background-color: #f8f8f8;
   border-top: 1px solid #eaeaea;
+`
+
+const SocialNetworkItems = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 `
 
 const SocialNetworkItem = styled.li`
@@ -101,9 +115,33 @@ const SocialNetworkItem = styled.li`
 const SocialLink = styled(ExternalLink)`
   color: #666;
 
-  // &:hover {
-  //   border-bottom: 1px dotted #000;
-  // }
+  &:hover {
+    border-bottom: 1px dotted #000;
+  }
+`
+
+const CreditContainer = styled.div`
+  @media (max-width: 699px) {
+    border-top: 1px solid rgb(0, 0, 0, 0.1);
+  }
+`
+
+const Credits = styled.ul`
+  list-style: none;
+  letter-spacing: 1px;
+  padding: 1rem;
+`
+
+const Credit = styled.li`
+  display: flex;
+  align-items: center;
+  @media (min-width: 700px) {
+    font-size: 0.7rem;
+  }
+
+  @media (max-width: 699px) {
+    font-size: 0.45rem;
+  }
 `
 
 const Layout = ({ children, data }) => (
@@ -137,19 +175,46 @@ const Layout = ({ children, data }) => (
           <ContentContainer>
             <Content>{children}</Content>
             <SocialNetworkContainer>
-              <SocialNetworkItem>
-                <SocialLink href="https://twitter.com/slightedgecoder">
-                  Twitter
-                </SocialLink>
-              </SocialNetworkItem>
-              <SocialNetworkItem>
-                <SocialLink href="https://dev.to/dance2die">dev.to</SocialLink>
-              </SocialNetworkItem>
-              <SocialNetworkItem>
-                <SocialLink href="https://stackoverflow.com/users/4035/sung?tab=profile">
-                  StackOverflow
-                </SocialLink>
-              </SocialNetworkItem>
+              <SocialNetworkItems>
+                <SocialNetworkItem>
+                  <SocialLink href="https://twitter.com/slightedgecoder">
+                    Twitter
+                  </SocialLink>
+                </SocialNetworkItem>
+                <SocialNetworkItem>
+                  <SocialLink href="https://dev.to/dance2die">
+                    dev.to
+                  </SocialLink>
+                </SocialNetworkItem>
+                <SocialNetworkItem>
+                  <SocialLink href="https://stackoverflow.com/users/4035/sung?tab=profile">
+                    StackOverflow
+                  </SocialLink>
+                </SocialNetworkItem>
+              </SocialNetworkItems>
+              <CreditContainer>
+                <Credits>
+                  SVG Image Credits
+                  <Credit>
+                    <CreditBlogEmoji /> -{' '}
+                    <SocialLink href="https://thenounproject.com/search/?q=creations&i=1279581">
+                      Writing by krishna from the Noun Project
+                    </SocialLink>
+                  </Credit>
+                  <Credit>
+                    <CreditCreationsEmoji /> -{' '}
+                    <SocialLink href="https://thenounproject.com/search/?q=creations&i=516844">
+                      creativity by Becris from the Noun Project
+                    </SocialLink>
+                  </Credit>
+                  <Credit>
+                    <CreditContributionsEmoji /> -{' '}
+                    <SocialLink href="https://thenounproject.com/search/?q=contributions&i=1736176">
+                      teamwork by vectoriconset10 from the Noun Project
+                    </SocialLink>
+                  </Credit>
+                </Credits>
+              </CreditContainer>
             </SocialNetworkContainer>
           </ContentContainer>
         </Container>

@@ -85,7 +85,6 @@ const IndexPage = props => {
             style={LinkStyle}
             href="https://www.slightedgecoder.com/"
           >
-            {/* <Emoji src={blogEmoji} alt="Blog Emoji" /> */}
             <BlogEmoji />
             <LinkDescription>Blog</LinkDescription>
             <Figure src={blogFigure} alt="Blog SVG" />
@@ -93,7 +92,6 @@ const IndexPage = props => {
         </ListItem>
         <ListItem>
           <ExternalLink style={LinkStyle} href="https://github.com/dance2die/">
-            {/* <Emoji src={creationsEmoji} alt="Creations Emoji" /> */}
             <CreationsEmoji />
             <LinkDescription>Creations</LinkDescription>
             <Figure src={creationsFigure} alt="Creations SVG" />
@@ -101,7 +99,6 @@ const IndexPage = props => {
         </ListItem>
         <ListItem>
           <InternalLink style={LinkStyle} to="/contributions/">
-            {/* <Emoji src={contributionsEmoji} alt="Contributions Emoji" /> */}
             <ContributionsEmoji />
             <LinkDescription>Contributions</LinkDescription>
             <Figure src={contributionsFigure} alt="Contributions SVG" />
