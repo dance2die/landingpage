@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const HeaderLink = styled(Link).attrs({
   href: props => props.to,
@@ -7,7 +8,7 @@ const HeaderLink = styled(Link).attrs({
   text-decoration: none;
 `
 
-const ExternalLink = styled.a.attrs({
+const ExternalLink = styled(OutboundLink).attrs({
   target: '_blank',
   href: props => props.href,
 })`
