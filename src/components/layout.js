@@ -189,7 +189,7 @@ const Layout = ({ children, data }) => (
             <SocialNetworkContainer>
               <SocialNetworkItems>
                 <SocialNetworkItem>
-                  <SocialLink href="https://twitter.com/slightedgecoder">
+                  <SocialLink href="https://twitter.com/dance2die">
                     Twitter
                   </SocialLink>
                 </SocialNetworkItem>
