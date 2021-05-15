@@ -5,21 +5,21 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "gatsby": "next",
-    "gatsby-cli": "^1.1.58",
+    "gatsby-cli": "1.1.58",
     "gatsby-image": "next",
-    "gatsby-plugin-google-analytics": "^1.0.31",
+    "gatsby-plugin-google-analytics": "1.0.31",
     "gatsby-plugin-react-helmet": "next",
-    "gatsby-plugin-react-svg": "^1.1.1",
+    "gatsby-plugin-react-svg": "1.1.1",
     "gatsby-plugin-sharp": "next",
-    "gatsby-source-filesystem": "^1.5.39",
-    "gatsby-transformer-remark": "^1.7.44",
-    "prop-types": "^15.6.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-helmet": "^5.2.0",
-    "react-typography": "^0.16.13",
-    "styled-components": "^3.3.3",
-    "typography": "^0.16.17"
+    "gatsby-source-filesystem": "1.5.39",
+    "gatsby-transformer-remark": "1.7.44",
+    "prop-types": "15.6.2",
+    "react": "16.4.1",
+    "react-dom": "16.4.1",
+    "react-helmet": "5.2.0",
+    "react-typography": "0.16.20",
+    "styled-components": "3.4.10",
+    "typography": "0.16.21"
   },
   "keywords": [
     "gatsby"
@@ -32,7 +32,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.12.0"
+    "prettier": "1.13.7"
   },
   "repository": {
     "type": "git",
